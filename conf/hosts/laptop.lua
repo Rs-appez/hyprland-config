@@ -13,7 +13,6 @@ return {
 		{ fkey = "F19", id = 5 },
 		{ fkey = "F24", id = 6 },
 	},
-	autostart = { "org.keepassxc.KeePassXC" },
 	idle_conf = "~/.config/hypr/hypridle-laptop.conf",
 	window_rules = {},
 }

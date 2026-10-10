@@ -18,7 +18,6 @@ return {
 		"vesktop",
 		"vesktop --user-data-dir=$HOME/.config/vesktop-work",
 		"spotify",
-		"keepassxc %U",
 	},
 	idle_conf = "~/.config/hypr/hypridle-desktop.conf",
 	window_rules = {
