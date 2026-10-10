@@ -17,6 +17,7 @@ function M.setup(hostname, programs)
 	hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd("loginctl lock-session"))
 	hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("dunstctl close-all"))
 	hl.bind(mainMod .. " + CTRL + P", hl.dsp.exec_cmd("hyprpicker -a"))
+	hl.bind(mainMod .. " + M", hl.dsp.exit())
 
 	hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 	hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))

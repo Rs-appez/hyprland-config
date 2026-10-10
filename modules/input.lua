@@ -16,15 +16,15 @@ function M.setup()
 			},
 		},
 
-		gestures = {
-			workspace_swipe = false,
-		},
+		-- gestures = {
+		-- 	workspace_swipe = false,
+		-- },
 	})
 
-	hl.input_device({
-		name = "epic-mouse-v1",
-		sensitivity = -0.5,
-	})
+	-- hl.input_device({
+	-- 	name = "epic-mouse-v1",
+	-- 	sensitivity = -0.5,
+	-- })
 end
 
 return M

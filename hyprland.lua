@@ -1,26 +1,7 @@
-local hostname = io.popen("hostname"):read("*l")
+local host = require("conf.host").load()
 
-local monitor = require("modules.monitor")
-local programs = require("modules.programs")
-local autostart = require("modules.autostart")
-local lookandfeel = require("modules.lookandfeel")
-local workspaces = require("modules.workspaces")
-local windowrules = require("modules.windowrules")
-local input = require("modules.input")
-local bindings = require("modules.bindings")
-
-monitor.setup(hostname)
-
-programs.setup()
-
-lookandfeel.setup()
-
-input.setup()
-
-autostart.setup(hostname)
-
-workspaces.setup(hostname)
-
-windowrules.setup(hostname)
-
-bindings.setup(hostname, programs.state)
+require("conf.general").setup(host)
+require("conf.monitors").setup(host)
+require("conf.windowrules").setup(host)
+require("conf.autostart").setup(host)
+require("conf.binds").setup(host)
