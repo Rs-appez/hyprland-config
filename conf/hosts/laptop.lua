@@ -1,8 +1,9 @@
 return {
 	monitor1 = "eDP-1",
-	monitor2 = "eDP-1",
+	monitor2 = "DP-2",
 	monitors = {
 		{ output = "eDP-1", mode = "1920x1080", position = "0x0", scale = 1 },
+		{ output = "DP-2", mode = "1920x1080", position = "0x-1800", scale = 1 },
 	},
 	-- numeric workspaces on the F13-24 keys
 	workspaces = {
