@@ -54,8 +54,16 @@ function M.setup(host)
 	hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 	hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true }) -- SUPER + azerty row -> numeric workspaces 1..10 (all hosts)
 	for i, key in ipairs(azerty) do
-		hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
-		hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+		local ws = host.workspaces and host.workspaces[i]
+		if ws and ws.name then
+			local ws1 = "name:" .. ws.name .. "1"
+			local ws2 = "name:" .. ws.name .. "2"
+			hl.bind(mainMod .. " + " .. key, focus_pair(ws1, ws2))
+			hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = ws1 }))
+		else
+			hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
+			hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+		end
 	end -- F13-24 row -> per-host workspaces
 	for _, ws in ipairs(host.workspaces) do
 		if ws.name then

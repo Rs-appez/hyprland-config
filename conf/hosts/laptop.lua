@@ -7,12 +7,12 @@ return {
 	},
 	-- numeric workspaces on the F13-24 keys
 	workspaces = {
-		{ fkey = "F23", id = 1 },
-		{ fkey = "F22", id = 2 },
-		{ fkey = "F21", id = 3 },
-		{ fkey = "F20", id = 4 },
-		{ fkey = "F19", id = 5 },
-		{ fkey = "F24", id = 6 },
+		{ fkey = "F23", name = "browser", default = true },
+		{ fkey = "F22", name = "code" },
+		{ fkey = "F21", name = "social" },
+		{ fkey = "F20", name = "misc" },
+		{ fkey = "F19", name = "extra1" },
+		{ fkey = "F24", name = "extra2" },
 	},
 	idle_conf = "~/.config/hypr/hypridle-laptop.conf",
 	window_rules = {},
