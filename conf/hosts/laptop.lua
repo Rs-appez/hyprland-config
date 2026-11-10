@@ -15,5 +15,12 @@ return {
 		{ fkey = "F24", name = "extra2" },
 	},
 	idle_conf = "~/.config/hypr/hypridle-laptop.conf",
-	window_rules = {},
+	window_rules = {
+		{
+			name = "flameshot",
+			match = { class = "(flameshot)", title = "(flameshot)" },
+			pin = true,
+			float = true,
+		},
+	},
 }
